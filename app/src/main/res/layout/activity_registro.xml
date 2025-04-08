@@ -30,8 +30,7 @@
             app:lottie_loop="true"
             app:lottie_autoPlay="true"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            />
+            android:layout_marginTop="10dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -112,8 +111,9 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/worksans"
             android:textSize="18sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/TengounacuentaTXT"
@@ -123,7 +123,7 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
 
