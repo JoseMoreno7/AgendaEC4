@@ -1,9 +1,12 @@
 package com.idat.agenda;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,6 +15,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -26,14 +30,18 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MenuPrincipal extends AppCompatActivity {
 
-    Button CerrarSesion;
+    Button AgregarNotas, ListarNotas, Importantes, Contactos, AcercaDe, CerrarSesion, EstadoCuentaPrincipal;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
 
-    TextView NombresPrincipal, CorreoPrincipal;
-    ProgressBar progressBar;
+    ImageView Imagen_usuario;
 
+    TextView UidPrincipal ,NombresPrincipal, CorreoPrincipal;
+    ProgressBar progressBar, progressBarDatos;
+    ProgressDialog progressDialog;
+    LinearLayoutCompat Linear_Nombres, Linear_Correo, Linear_Verificacion;
     DatabaseReference Usuarios;
+    Dialog dialog_cuenta_verificada, dialog_informacion, dialog_fecha;
 
 
     @Override
@@ -44,8 +52,11 @@ public class MenuPrincipal extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Agenda");
 
+        //Imagen_usuario = findViewById(R.id.Imagen_usuario);
+        //UidPrincipal = findViewById(R.id.UidPrincipal);
         NombresPrincipal = findViewById(R.id.NombresPrincipal);
         CorreoPrincipal = findViewById(R.id.CorreoPrincipal);
+        //EstadoCuentaPrincipal = findViewById(R.id.EstadoCuentaPrincipal);
         progressBar = findViewById(R.id.progress_BarDatos);
 
         Usuarios = FirebaseDatabase.getInstance().getReference("Usuarios");

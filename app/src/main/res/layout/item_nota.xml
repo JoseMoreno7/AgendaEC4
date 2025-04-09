@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardUseCompatPadding="true"
+    android:padding="0.2dp"
+    app:cardCornerRadius="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <!-- ICONO -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icono_item_nota" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:orientation="vertical">
+
+            <!-- Uid de nota -->
+            <TextView
+                android:id="@+id/Id_nota_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="Id de la nota"
+                android:visibility="gone"
+
+                />
+
+            <!-- Uid de usuario -->
+            <TextView
+                android:id="@+id/Uid_usuario_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="Id del usuario"
+                android:visibility="gone" />
+
+            <!-- Correo de usuario -->
+            <TextView
+                android:id="@+id/Correo_usuario_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="Correo del usuario"
+                android:visibility="gone" />
+
+            <!-- Fecha y hora de registro -->
+            <TextView
+                android:id="@+id/Fecha_hora_registro_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="Fecha y hora de registro"
+                android:visibility="gone" />
+
+            <!-- Titulo de la nota -->
+            <TextView
+                android:id="@+id/Titulo_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="Titulo"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- Descripcion de la nota -->
+            <TextView
+                android:id="@+id/Descripcion_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="Descripcion"
+                android:textSize="18sp" />
+
+            <!-- Fecha de la nota -->
+            <TextView
+                android:id="@+id/Fecha_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="00/00/0000"
+                android:textSize="18sp" />
+
+            <!-- Estado de la nota -->
+            <TextView
+                android:id="@+id/Estado_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/worksans"
+                android:text="No finalizado"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>
