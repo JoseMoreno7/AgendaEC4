@@ -39,7 +39,7 @@
             android:layout_marginTop="10dp">
 
             <EditText
-                android:id="@+id/CorreLogin"
+                android:id="@+id/CorreoLogin"
                 android:hint="@string/CorreoLogin"
                 android:inputType="textEmailAddress"
                 android:fontFamily="@font/worksans"
